@@ -5,20 +5,10 @@ import { v4 as uuidv4 } from "uuid";
 import bodyParser from "body-parser";
 
 const app = express();
-const PORT = process.env.PORT || 3000;
 
-// Ensure data directory exists
-const dataDir = path.resolve("data");
-if (!fs.existsSync(dataDir)) {
-    fs.mkdirSync(dataDir);
-}
+
 
 const fileName = path.resolve("data", "name.json");
-
-// Create empty name.json file if it doesn't exist
-if (!fs.existsSync(fileName)) {
-    fs.writeFileSync(fileName, JSON.stringify([]));
-}
 
 app.use("/static", express.static("public"));
 app.use(bodyParser.json());
@@ -107,6 +97,6 @@ app.delete("/delete/:id", (req, res) => {
     }
 });
 
-app.listen(PORT, () => {
-    console.log(`Server started on port ${PORT}`);
+app.listen(3000, () => {
+    console.log("server started");
 });
