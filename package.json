@@ -1,0 +1,11 @@
+{
+  "type": "module",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "express": "^5.1.0",
+    "express.js": "^1.0.0",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
+    "uuid": "^11.1.0"
+  }
+}
